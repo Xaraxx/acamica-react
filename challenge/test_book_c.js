@@ -1,0 +1,15 @@
+function greet(who) {
+    console.log("Hello " + who);
+    }
+
+greet("Harry");
+console.log("Bye");
+
+function multiplier(factor) {
+    return function(number) {
+    return number * factor;
+    };
+}
+
+    var twice = multiplier(2);
+    console.log(twice(5));
