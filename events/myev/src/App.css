@@ -1,0 +1,54 @@
+
+.App-header {
+  background-color: #282c34;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+
+
+.App {
+  font-family: sans-serif;
+  text-align: center;
+}
+
+.game {
+  display: flex;
+  flex-direction: row;
+  /* height: 70vh;
+  justify-content: center;
+  align-items: center; */
+}
+
+.table {
+  height: 200px;
+  width: 200px;
+  border: 1px solid black;
+}
+
+.cards {
+  display: flex;
+  flex-direction: row;
+  height: 20vh;
+}
+
+.card {
+  height: 170px;
+  width: 110px;
+  margin: 10px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+img {
+  width: 100%;
+}

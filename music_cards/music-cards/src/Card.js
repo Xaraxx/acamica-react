@@ -3,6 +3,7 @@ import React from 'react';
 import AlbumRating from './AlbumRating'
 import AlbumImage from './AlbumImg'
 import AlbumDetail from './AlbumDetail';
+
 const Card = (props) => {
     return(
         <div className="card album-card">
