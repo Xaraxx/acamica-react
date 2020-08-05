@@ -2,7 +2,6 @@ import React from "react";
 import Card from "./card"
 
 const Game = (props) => {
-   console.log(props)
 
     return(
         <div className='game'>
@@ -17,7 +16,6 @@ const Game = (props) => {
         </div>
     )
     
-
 }
 
 export default Game

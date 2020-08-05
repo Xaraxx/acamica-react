@@ -1,4 +1,5 @@
 import React from 'react';
+import Box from './boxForm'
 
 import './App.css';
 
@@ -6,13 +7,8 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <h1>Lista de productos</h1>
+        <Box/>
       </header>
-      <body>
-        <div>
-          
-        </div>
-      </body>  
     </div>
   );
 }
