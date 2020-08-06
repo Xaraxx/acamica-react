@@ -32,13 +32,13 @@ class Box extends React.Component{
 
     handleDelete = (event, index) => {
         event.persist()
-        console.log("index fuera", index)
+
         this.setState( (state) => {
-            console.log("index dentro", index)
-            var newMessages = [...state.messages]
-            newMessages.splice(index, 1)
+  
+            var remainderMessages = [...state.messages]
+            remainderMessages.splice(index, 1)
             return {
-                messages: newMessages
+                messages: remainderMessages
             }
         })
     }
