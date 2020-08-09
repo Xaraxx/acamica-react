@@ -9,9 +9,9 @@ function App() {
       <header className="App-header">
       </header>
       <body className="App-body">
-        <div>
-          <Box/>
-        </div>
+        <Box/>
+        <Box/>
+        <Box/>
       </body>
     </div>
   );
