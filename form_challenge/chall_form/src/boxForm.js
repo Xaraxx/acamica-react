@@ -24,13 +24,25 @@ class Box extends React.Component{
         this.setState((oldState) => {
             return {
                 message:'',
-                messages:  [...oldState.messages, message],
+                messages:  [...oldState.messages, {message: message, watch: false}],
                 existsMessages: true
             }
-        }
-        
-        )
+        })
     }
+
+    handleWatch = (event, index) => {
+        
+        event.persist()
+        this.setState((oldState) => {
+            const messages = [...oldState.messages]
+            messages[index].watch = true
+            
+            return {
+                messages: messages
+            }
+        })
+    }
+
 
     handleDelete = (event, index) => {
         event.persist()
@@ -59,6 +71,7 @@ class Box extends React.Component{
                 <MessageList 
                 messages={messages}
                 handleDelete={this.handleDelete}
+                handleWatch={this.handleWatch}
                 condition={existsMessages}
                 />
             </div>

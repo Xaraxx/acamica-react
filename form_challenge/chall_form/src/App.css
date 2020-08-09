@@ -50,6 +50,8 @@ input {
 button {
   border: transparent;
   background-color:  #282c34;
+  width: 40px;
+  height: 40px;
 }
 
 @media (prefers-reduced-motion: no-preference) {

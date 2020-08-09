@@ -1,14 +1,19 @@
 import React from 'react'
-import SawAndDelete from './button'
+import MessageItem from './button'
 
 const messageList = (props) =>{
+
     return(
-        <div className={`${props.condition ? "message-list" : ""}`}>
+        <div className={`${ props.condition && props.messages.length !== 0 ? "message-list" : ""}`}>
         
             {props.messages.map((message, index) => (
-                <div key={index} className="message">
-                    {message} <SawAndDelete delete={props.handleDelete}  index={index}/>
-                </div>  
+                <MessageItem
+                    key={index}
+                    onDelete={(event) => props.handleDelete(event, index)}
+                    onWatch={(event) => props.handleWatch(event, index)}
+                    index={index}
+                    message={message}
+                />
             ))}
         
         </div>
