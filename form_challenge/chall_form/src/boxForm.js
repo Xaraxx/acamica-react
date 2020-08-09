@@ -6,7 +6,8 @@ class Box extends React.Component{
     state = {
         message:'',
         messages: [],
-        position: ['left', 'center', 'right']
+        position: ['left', 'center', 'right'],
+        existsMessages : false,
     }
 
     handleMessage = (event) => {
@@ -23,7 +24,8 @@ class Box extends React.Component{
         this.setState((oldState) => {
             return {
                 message:'',
-                messages:  [...oldState.messages, message]
+                messages:  [...oldState.messages, message],
+                existsMessages: true
             }
         }
         
@@ -38,16 +40,17 @@ class Box extends React.Component{
             var remainderMessages = [...state.messages]
             remainderMessages.splice(index, 1)
             return {
-                messages: remainderMessages
+                messages: remainderMessages,
+                existsMessages: true
             }
         })
     }
 
 
     render(){
-        const {message, messages} = this.state
+        const {message, messages, existsMessages} = this.state
         return(
-            <div className='container'>
+            <div className='box-container'>
                 <Form 
                 message={message} 
                 handleMessage={this.handleMessage} 
@@ -56,6 +59,7 @@ class Box extends React.Component{
                 <MessageList 
                 messages={messages}
                 handleDelete={this.handleDelete}
+                condition={existsMessages}
                 />
             </div>
         )

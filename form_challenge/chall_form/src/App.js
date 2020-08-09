@@ -7,8 +7,12 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <Box/>
       </header>
+      <body className="App-body">
+        <div>
+          <Box/>
+        </div>
+      </body>
     </div>
   );
 }

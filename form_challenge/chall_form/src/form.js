@@ -2,7 +2,7 @@ import React from 'react'
 
 const Form = (props) =>{
     return(
-        <div className="form">
+        <div className="form-container">
             <h2>Dialog  Box</h2>
                 <form className="message-form" onSubmit={props.handleSubmit}>
                     <input
