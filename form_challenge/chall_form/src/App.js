@@ -2,6 +2,8 @@ import React from 'react';
 import Box from './boxForm'
 
 import './App.css';
+import Main from "./Main"
+import Header from "./Header"
 
 function App() {
   return (
@@ -9,9 +11,8 @@ function App() {
       <header className="App-header">
       </header>
       <body className="App-body">
-        <Box/>
-        <Box/>
-        <Box/>
+        <Main/>
+        <Header/>
       </body>
     </div>
   );
