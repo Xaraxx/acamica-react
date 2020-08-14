@@ -9,8 +9,8 @@ const messageList = (props) =>{
             {props.messages.map((message, index) => (
                 <MessageItem
                     key={index}
-                    onDelete={(event) => props.handleDelete(event, index)}
-                    onWatch={(event) => props.handleWatch(event, index)}
+                    onDelete={(event) => props.handleDelete(event, props.id, index)}
+                    onWatch={(event) => props.handleWatch(event, props.id, index)}
                     index={index}
                     message={message}
                 />

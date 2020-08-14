@@ -1,19 +1,16 @@
 import React from 'react';
-import Box from './boxForm'
 
 import './App.css';
-import Main from "./Main"
-import Header from "./Header"
+import Container from "./container"
 
 function App() {
   return (
     <div className="App">
       <header className="App-header">
       </header>
-      <body className="App-body">
-        <Main/>
-        <Header/>
-      </body>
+      <div className="App-body">
+        <Container /> 
+      </div>
     </div>
   );
 }
